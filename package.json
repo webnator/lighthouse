@@ -1,0 +1,47 @@
+{
+  "name": "@webnator/seo-geo-audit",
+  "version": "0.1.0",
+  "description": "Deterministic SEO and GEO readiness checks for HTML, URLs and CI pipelines",
+  "type": "module",
+  "license": "MIT",
+  "author": "Williams Aguilera",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webnator/lighthouse.git"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "seo-geo-audit": "dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "tsx --test src/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "yaml": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
