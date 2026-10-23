@@ -4,6 +4,15 @@ A small TypeScript library and CLI for repeatable SEO and content-extraction che
 
 This project started as a private tool named Lighthouse. It is independent of **Google Lighthouse** and does not measure browser performance or Core Web Vitals.
 
+## Install
+
+Requires Node.js 22 or newer.
+
+```sh
+npm install @webnator/seo-geo-audit
+npx @webnator/seo-geo-audit https://example.com --format json
+```
+
 ## Install from source
 
 Requires Node.js 22 or newer.
@@ -17,7 +26,7 @@ npm run build
 node dist/cli.js --help
 ```
 
-The npm package is prepared as `@webnator/seo-geo-audit`. Registry publication is pending; use the source checkout or a locally packed tarball until a version is published.
+Package: `@webnator/seo-geo-audit`. The CLI command after installation is `seo-geo-audit`.
 
 ## CLI
 
@@ -39,10 +48,10 @@ Scores alone do not change the exit status unless you request a gate. Artifacts 
 
 ## Library
 
-After building this checkout:
+With the npm package installed:
 
 ```js
-import { audit, auditHtml, formatReport } from './dist/index.js';
+import { audit, auditHtml, formatReport } from '@webnator/seo-geo-audit';
 
 const report = await audit('https://example.com', {
   timeoutMs: 10_000,

@@ -7,7 +7,7 @@
   "author": "Williams Aguilera",
   "repository": {
     "type": "git",
-    "url": "https://github.com/webnator/lighthouse.git"
+    "url": "git+https://github.com/webnator/lighthouse.git"
   },
   "engines": {
     "node": ">=22"
